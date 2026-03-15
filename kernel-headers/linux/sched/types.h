@@ -4,7 +4,7 @@
 
 #include <linux/types.h>
 
-struct sched_param {
+struct __kernel_sched_param {
 	int sched_priority;
 };
 
@@ -14,7 +14,7 @@ struct sched_param {
 /*
  * Extended scheduling parameters data structure.
  *
- * This is needed because the original struct sched_param can not be
+ * This is needed because the original struct __kernel_sched_param can not be
  * altered without introducing ABI issues with legacy applications
  * (e.g., in sched_getparam()).
  *
